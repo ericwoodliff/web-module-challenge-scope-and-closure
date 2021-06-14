@@ -90,26 +90,25 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(inning){
+function finalScore(inningCallBack){
   return {
-    Home: inning(),
-    Away: inning()
+    Home: inningCallBack(),
+    Away: inningCallBack()
   }
 }
- console.log(finalScore(inning, 9));
+ 
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(inning) {
-  const gameScore = [];
-  let homeScore = 0;
-  let awayScore = 0;
-
+function getInningScore(inningCallBack) {
+  return {
+    Home: inningCallBack(),
+    Away: inningCallBack(),
+  }
 }
-
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
 Use the scoreboard function below to do the following:
@@ -152,7 +151,7 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
+function scoreboard(getInningScore, inning, number) {
   /* CODE HERE */
 }
 
