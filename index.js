@@ -40,7 +40,7 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
      I would use the counter1 code if I only needed to return the 'count' variable in 'function counter'; nested functions allow me to have scope to the variables being declared in the function above it. However, I can not use the count variable outside of the main or nested functions. 
      
-     Moreover, because I can't get access to a variable created within a function from outside of a function, I  would use counter2 code if I needed to re-use the count variable in a separate, non-nested function. 
+     Moreover, because I can't get access to a variable created within a function from outside of a   function, I  would use counter2 code if I needed to re-use the count variable in a separate, non-nested function. 
   
 */
 
@@ -71,10 +71,10 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    return Math.floor(Math.random() * Math.floor(2));
 }
-
+console.log(inning());
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
@@ -90,17 +90,24 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(inning){
+  return {
+    Home: inning(),
+    Away: inning()
+  }
 }
+ console.log(finalScore(inning, 9));
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(inning) {
+  const gameScore = [];
+  let homeScore = 0;
+  let awayScore = 0;
+
 }
 
 
