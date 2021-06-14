@@ -28,11 +28,20 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+
+  In order to re-use the count variable in the counter function, counter1 code is implementing a nested function - a function within a function - while counter2 code has a single function which uses closure to return count++.
+
   2. Which of the two uses a closure? How can you tell?
+
+  I can tell that Counter2 uses closure because it is returning count which is outside of its scope. 
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+  
+     I would use the counter1 code if I only needed to return the 'count' variable in 'function counter'; nested functions allow me to have scope to the variables being declared in the function above it. However, I can not use the count variable outside of the main or nested functions. 
+     
+     Moreover, because I can't get access to a variable created within a function from outside of a function, I  would use counter2 code if I needed to re-use the count variable in a separate, non-nested function. 
+  
 */
 
 // counter1 code
